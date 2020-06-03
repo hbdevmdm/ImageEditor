@@ -1,8 +1,7 @@
 # Image Editor - Edit and Crop image easily
 A Image Editor library with simple, easy support for image editing using Paints, Text, Filters, Emoji and Sticker and crop images with rectangle and oval shape.
-<p align="center">
-<img alt="RecyclerView Adapter Library" src="https://github.com/mkrupal09/AndroidControlDemo/blob/master/imageeditor/editor.png" width = "339" height = "604"/>
-  </p>
+
+![](images/demo.png)  ![](images/editor.png)
 
 # Featues
 
