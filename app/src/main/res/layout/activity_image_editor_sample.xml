@@ -1,0 +1,243 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<layout>
+
+    <androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:padding="10dp"
+            tools:context=".MainActivity">
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/imageView"
+                android:layout_width="200dp"
+                android:layout_height="200dp"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tvShape"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:text="Crop Shape"
+                android:textColor="@android:color/black"
+                android:textSize="18sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/imageView" />
+
+            <RadioGroup
+                android:id="@+id/radioGroup"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:orientation="horizontal"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tvShape">
+
+                <RadioButton
+                    android:id="@+id/rbRectangle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:checked="true"
+                    android:text="Rectangle"
+                    android:textColor="@android:color/black"
+                    android:textSize="14sp" />
+
+                <RadioButton
+                    android:id="@+id/rbCircle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                    android:text="Circle"
+                    android:textColor="@android:color/black"
+                    android:textSize="14sp" />
+            </RadioGroup>
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tvAspectRation"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:text="Aspect Ration"
+                android:textColor="@android:color/black"
+                android:textSize="18sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/radioGroup" />
+
+            <RadioGroup
+                android:id="@+id/radioGroupAspectRation"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:orientation="horizontal"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tvAspectRation">
+
+                <RadioButton
+                    android:id="@+id/rbFree"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:checked="true"
+                    android:text="Free"
+                    android:textColor="@android:color/black"
+                    android:textSize="14sp" />
+
+                <RadioButton
+                    android:id="@+id/rb1to1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="1:1"
+                    android:textColor="@android:color/black"
+                    android:textSize="14sp" />
+
+                <RadioButton
+                    android:id="@+id/rb3to4"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="3:4"
+                    android:textColor="@android:color/black"
+                    android:textSize="14sp" />
+
+                <RadioButton
+                    android:id="@+id/rb4to3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="4:3"
+                    android:textColor="@android:color/black"
+                    android:textSize="14sp" />
+
+                <RadioButton
+                    android:id="@+id/rb9to16"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="9:16"
+                    android:textColor="@android:color/black"
+                    android:textSize="14sp" />
+
+                <RadioButton
+                    android:id="@+id/rb16to9"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="16:9"
+                    android:textColor="@android:color/black"
+                    android:textSize="14sp" />
+            </RadioGroup>
+
+            <androidx.appcompat.widget.AppCompatCheckBox
+                android:id="@+id/cbOnlyCrop"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:text="Only Crop"
+                android:textColor="@android:color/black"
+                android:textSize="18sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/radioGroupAspectRation" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tvTools"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:text="Tools"
+                android:textColor="@android:color/black"
+                android:textSize="18sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/cbOnlyCrop" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/btnCrop"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="6dp"
+                android:text="Select Image"
+                android:textColor="@android:color/black"
+                android:textSize="18sp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.55"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/cbEmoji" />
+
+            <androidx.appcompat.widget.AppCompatCheckBox
+                android:id="@+id/cbBrush"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:text="@string/label_brush"
+                app:layout_constraintEnd_toStartOf="@+id/cbText"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintHorizontal_chainStyle="spread"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tvTools" />
+
+            <androidx.appcompat.widget.AppCompatCheckBox
+                android:id="@+id/cbText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/label_text"
+                app:layout_constraintEnd_toStartOf="@+id/cbEraser"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toEndOf="@+id/cbBrush"
+                app:layout_constraintTop_toTopOf="@+id/cbBrush" />
+
+            <androidx.appcompat.widget.AppCompatCheckBox
+                android:id="@+id/cbEraser"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/label_eraser"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toEndOf="@+id/cbText"
+                app:layout_constraintTop_toTopOf="@+id/cbText" />
+
+            <androidx.appcompat.widget.AppCompatCheckBox
+                android:id="@+id/cbFilter"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/label_filter"
+                app:layout_constraintEnd_toStartOf="@+id/cbEmoji"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintHorizontal_chainStyle="spread"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/cbText" />
+
+            <androidx.appcompat.widget.AppCompatCheckBox
+                android:id="@+id/cbEmoji"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/label_emoji"
+                app:layout_constraintEnd_toStartOf="@+id/cbSticker"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toEndOf="@+id/cbFilter"
+                app:layout_constraintTop_toTopOf="@+id/cbFilter" />
+
+            <androidx.appcompat.widget.AppCompatCheckBox
+                android:id="@+id/cbSticker"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/label_sticker"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toEndOf="@+id/cbEmoji"
+                app:layout_constraintTop_toTopOf="@+id/cbEmoji" />
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.core.widget.NestedScrollView>
+</layout>
