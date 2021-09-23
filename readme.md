@@ -32,7 +32,7 @@ Grab via Maven:
 ```
 or Gradle:
 ```groovy
-implementation 'com.hb.imageeditor:imageeditor:1.0'
+implementation 'com.github.hbdevmdm:ImageEditor:1.0'
 ```
 
 # How it works?
